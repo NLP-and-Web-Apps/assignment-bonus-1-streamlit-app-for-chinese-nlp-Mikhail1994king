@@ -29,7 +29,7 @@ with st.expander('Analyze text'):
 
 posts = api.user_timeline(screen_name="@iingwen", count = 100, lang ="eng", tweet_mode="extended")
 for tweet in posts[:5]:
-    print(str(i) +') '+ tweet.full_text + '\n')
+    str(i) +') '+ tweet.full_text + '\n'
     i= i+1
 
 st.write(pd.DataFrame([tweet.full_text for tweet in posts], columns=['Tweets']))
