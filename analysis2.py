@@ -2,18 +2,18 @@
 import streamlit as st
 from snownlp import SnowNLP
 
+
+
 st.header("Sentiment Analysis")
 with st.expander('Analyze text'):
     text = st.text_input("Input screen name")
-
-def SnowNLP(text):
-  sent = text.sentences
-  for sen in sent:
+    if text:
+      sent = text.sentences
       s = SnowNLP(sen)
-      print(s.sentiments)
+      for sen in sent:
+          st.write(s.sentiments)
+    
 
-SnowNLP
-st.write(pd.DataFrame({
-  'first column': s
-}))
+
+
 
