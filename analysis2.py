@@ -7,11 +7,10 @@ from snownlp import SnowNLP
 st.header("Sentiment Analysis")
 with st.expander('Analyze text'):
     text = st.text_input("Input screen name")
-    if text:
-      sent = text.sentences
+    sent = text.sentences
+    for sen in sent:
       s = SnowNLP(sen)
-      for sen in sent:
-          st.write(s.sentiments)
+      st.write(s.sentiments)
     
 
 
