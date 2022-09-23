@@ -27,7 +27,7 @@ st.header("Sentiment Analysis")
 with st.expander('Analyze text'):
     text = st.text_input("Input screen name")
 
-posts = api.user_timeline(screen_name=text, count = 100, lang ="eng", tweet_mode="extended")
+posts = api.user_timeline(screen_name="@iingwen", count = 100, lang ="eng", tweet_mode="extended")
 
 #  Print the last 5 tweets
 st.print("Show the 5 recent tweets:\n")
