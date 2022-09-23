@@ -1,10 +1,7 @@
 
-
 import pandas as pd
 import numpy as np
 import streamlit as st
-
-
 from snownlp import SnowNLP
 
 st.header("Sentiment Analysis")
