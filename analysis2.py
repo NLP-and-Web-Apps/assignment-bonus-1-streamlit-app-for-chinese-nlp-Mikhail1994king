@@ -14,6 +14,6 @@ def SnowNLP(text):
 
 SnowNLP
 st.write(pd.DataFrame({
-  'first column': [s],
+  'first column': s
 }))
 
