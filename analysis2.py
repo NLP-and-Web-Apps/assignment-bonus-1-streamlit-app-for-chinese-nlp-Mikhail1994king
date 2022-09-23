@@ -28,19 +28,15 @@ with st.expander('Analyze text'):
     text = st.text_input("Input screen name")
 
 posts = api.user_timeline(screen_name="@iingwen", count = 100, lang ="eng", tweet_mode="extended")
-
-
-
-
-print("Show the 5 recent tweets:\n")
-i=1
 for tweet in posts[:5]:
-    st.print(str(i) +') '+ tweet.full_text + '\n')
+    print(str(i) +') '+ tweet.full_text + '\n')
     i= i+1
 
 st.write(pd.DataFrame([tweet.full_text for tweet in posts], columns=['Tweets']))
 # Show the first 5 rows of data
 st.df()
+
+
 
 
 
