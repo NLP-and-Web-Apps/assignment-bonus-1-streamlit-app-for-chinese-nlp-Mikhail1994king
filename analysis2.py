@@ -15,10 +15,18 @@ with st.expander('情感分析'):
       st.write(s.han)
 
 
+
+
 try:
   st.balloons()
   st.markdown('**Sentence Sentiment Result**')
   st.write(s1.sentiments)
+  if s1.sentiments>0.8:
+    st.write("😄")
+  elif s1.sentiments>0.5<0.8:
+    st.write("🙂")  
+  elif s1.sentiments<0.5:
+    st.write("😞")
 except ValueError as e:
   print(e)
 
