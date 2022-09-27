@@ -8,7 +8,6 @@ st.header("Sentiment Analysis")
 with st.expander('情感分析'):
     text = st.text_input("請輸入文字")
     s1= SnowNLP(text)
-    st.markdown("sentiment result")
     for sen in text:
       s = SnowNLP(sen)
       st.write(list(s.tags))
