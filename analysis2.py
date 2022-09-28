@@ -1,4 +1,5 @@
 
+from unittest import result
 import streamlit as st
 from snownlp import SnowNLP
 
@@ -15,7 +16,6 @@ with st.expander('情感分析'):
 
 
 
-
 try:
   st.balloons()
   st.markdown('**Sentence Sentiment Result**')
@@ -28,6 +28,9 @@ try:
     st.write("😞")
 except ValueError as e:
   print(e)
+
+
+
 
 
 
